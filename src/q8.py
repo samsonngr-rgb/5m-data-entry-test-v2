@@ -20,7 +20,7 @@ Task
 
 (a) What does the buggy version actually return for [1, 2, 3, 4, 5, 6, 8], and why?
 
-    Answer:
+    Answer: Returns 3 odd numbers "1,3,5" instead of even numbers
 
 (b) Fix the bug. Write the corrected function below.
     (A one-character change is enough, but you must understand why.)
@@ -28,11 +28,17 @@ Task
 
 def count_evens(numbers):
     # your corrected code here
-    pass
+    count = 0
+    for n in numbers:
+        if n % 2 == 0:
+            count = count + 1
+    return count
+
+
 
 
 """
 (c) In one sentence, explain in plain English what `n % 2 == 0` checks.
 
-    Answer:
+    Answer: Check the number divide by 2 with no remainder. When it is true, number will be even, or when it is false the number will be odd 
 """
